@@ -20,7 +20,7 @@ function uuid() {
 }
 
 const addNotesHandler = () => {
-  if (newNote?.value?.length < 10) {
+  if (newNote?.value?.trim.length < 10) {
     return (errorMessage.value = "Notes must be at least 10 characters");
   }
   notesList.value.push({
